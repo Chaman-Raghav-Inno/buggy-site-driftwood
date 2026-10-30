@@ -1,0 +1,1 @@
+# The store uses the standard library only. Development: pip install ruff pytest.

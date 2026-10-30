@@ -1,0 +1,67 @@
+<p id="loading" class="muted">Loading…</p>
+<article id="stay" class="stay" hidden>
+  <header class="stay-head">
+    <div>
+      <h1 id="s-name"></h1>
+      <p class="muted"><span id="s-rating"></span> · <span id="s-where"></span> · <span id="s-type"></span></p>
+    </div>
+    <button type="button" id="s-save" class="btn btn-ghost heart-btn" aria-pressed="false">♡ Save</button>
+  </header>
+  <img id="s-image" class="stay-image" alt="" width="960" height="420">
+  <div class="stay-grid">
+    <div class="stay-main">
+      <section class="block">
+        <h2>About this stay</h2>
+        <p id="s-about"></p>
+        <p class="muted" id="s-host"></p>
+        <ul id="s-amenities" class="pills"></ul>
+      </section>
+      <section class="block">
+        <h2>House rules</h2>
+        <ul class="rules" id="s-rules"></ul>
+      </section>
+      <section class="block">
+        <h2>Prices</h2>
+        <ul class="rules" id="s-prices"></ul>
+        <p class="muted small">See <a href="/help">how pricing works</a> for every fee and discount.</p>
+      </section>
+      <section class="block">
+        <h2>Cancellation policy</h2>
+        <p id="s-policy"></p>
+      </section>
+      <section class="block">
+        <div class="cal-head">
+          <h2>Availability</h2>
+          <div class="cal-nav">
+            <button type="button" id="cal-prev" class="btn btn-ghost btn-small" aria-label="Previous month">‹</button>
+            <button type="button" id="cal-next" class="btn btn-ghost btn-small" aria-label="Next month">›</button>
+          </div>
+        </div>
+        <div id="calendar" class="calendar"></div>
+        <p class="muted small"><span class="legend taken"></span> Not available</p>
+      </section>
+      <section class="block">
+        <h2 id="s-review-title">Reviews</h2>
+        <ul id="s-reviews" class="reviews"></ul>
+      </section>
+    </div>
+    <aside class="widget card" aria-label="Book this stay">
+      <p class="widget-price"><strong id="w-from"></strong> <span class="muted">a night (Sun–Thu)</span></p>
+      <form id="w-form" novalidate>
+        <div class="field-row">
+          <div class="field"><label for="w-in">Check-in</label><input id="w-in" type="date"></div>
+          <div class="field"><label for="w-out">Check-out</label><input id="w-out" type="date"></div>
+        </div>
+        <div class="field guests-field" id="w-guests"></div>
+        <div class="field" id="w-pets-field" hidden>
+          <label for="w-pets">Pets</label>
+          <select id="w-pets"></select>
+        </div>
+        <p id="w-msg" class="msg error" role="alert"></p>
+        <div id="w-estimate" class="estimate" hidden></div>
+        <button type="submit" id="w-reserve" class="btn btn-block">Reserve</button>
+        <p class="muted small center">You won't be charged yet.</p>
+      </form>
+    </aside>
+  </div>
+</article>

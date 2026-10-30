@@ -1,0 +1,46 @@
+<h1 class="page-title">Find a stay</h1>
+<form id="filters" class="filters card" novalidate>
+  <div class="field">
+    <label for="f-location">Where</label>
+    <select id="f-location">
+      <option value="">Anywhere</option>
+      <option value="Honolulu">Honolulu</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="Reykjavik">Reykjavík</option>
+    </select>
+  </div>
+  <div class="field"><label for="f-in">Check-in</label><input id="f-in" type="date"></div>
+  <div class="field"><label for="f-out">Check-out</label><input id="f-out" type="date"></div>
+  <div class="field guests-field" id="f-guests"></div>
+  <div class="field">
+    <label for="f-price">Price a night</label>
+    <select id="f-price">
+      <option value="">Any price</option>
+      <option value="150">Up to $150</option>
+      <option value="200">Up to $200</option>
+      <option value="250">Up to $250</option>
+      <option value="300">Up to $300</option>
+    </select>
+  </div>
+  <fieldset class="field types">
+    <legend>Type</legend>
+    <label class="check"><input type="checkbox" name="type" value="House"> House</label>
+    <label class="check"><input type="checkbox" name="type" value="Apartment"> Apartment</label>
+    <label class="check"><input type="checkbox" name="type" value="Cabin"> Cabin</label>
+    <label class="check"><input type="checkbox" name="type" value="Room"> Room</label>
+  </fieldset>
+  <div class="field check-field">
+    <label class="check"><input type="checkbox" id="f-pets"> Pets allowed</label>
+  </div>
+  <div class="field">
+    <label for="f-sort">Sort by</label>
+    <select id="f-sort">
+      <option value="">Recommended</option>
+      <option value="price">Price a night: low to high</option>
+      <option value="rating">Guest rating</option>
+    </select>
+  </div>
+</form>
+<p id="f-msg" class="msg error" role="alert"></p>
+<p id="result-count" class="muted" role="status" aria-live="polite"></p>
+<div id="results" class="grid"></div>

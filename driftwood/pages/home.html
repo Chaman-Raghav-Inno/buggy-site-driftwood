@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="hero-text">
+    <h1>Stay somewhere you'll remember.</h1>
+    <p>Beach cottages in Honolulu, city apartments in Tokyo and glass cabins under Reykjavík's northern lights.</p>
+  </div>
+  <form id="home-search" class="search-box card" novalidate>
+    <div class="field">
+      <label for="h-location">Where</label>
+      <select id="h-location">
+        <option value="">Anywhere</option>
+        <option value="Honolulu">Honolulu</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Reykjavik">Reykjavík</option>
+      </select>
+    </div>
+    <div class="field"><label for="h-in">Check-in</label><input id="h-in" type="date"></div>
+    <div class="field"><label for="h-out">Check-out</label><input id="h-out" type="date"></div>
+    <div class="field guests-field" id="h-guests"></div>
+    <button type="submit" class="btn">Search</button>
+    <p id="h-msg" class="msg error" role="alert"></p>
+  </form>
+</section>
+<section class="section">
+  <div class="section-head"><h2>Guest favourites</h2><a href="/search?sort=rating">See all</a></div>
+  <div id="featured" class="grid"></div>
+</section>

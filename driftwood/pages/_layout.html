@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · Driftwood Stays</title>
+<meta name="description" content="Driftwood Stays: cottages, apartments and cabins in Honolulu, Tokyo and Reykjavík.">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/core.js" defer></script>
+{{scripts}}
+</head>
+<body data-page="{{page}}" data-currency="{{currency}}" data-role="{{role}}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">≋</span> Driftwood <span>Stays</span></a>
+    <nav class="nav" aria-label="Main">{{nav}}</nav>
+    <div class="header-tools">
+      <label class="sr-only" for="currency">Currency</label>
+      <select id="currency" class="currency">
+        <option value="USD">$ USD</option>
+        <option value="EUR">€ EUR</option>
+        <option value="JPY">¥ JPY</option>
+      </select>
+      <span class="account">{{account}}</span>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+{{content}}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p><strong>Driftwood Stays</strong> · Demo booking site for QA testing. No real stays, payments or hosts.</p>
+    <p><a href="/help">How pricing works</a> · <a href="/search">All stays</a></p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
