@@ -1,0 +1,21 @@
+<h1 class="page-title">Host dashboard</h1>
+<section class="tiles" aria-label="Summary">
+  <div class="tile"><p class="tile-label">Upcoming payouts</p><p class="tile-value" id="h-payout">–</p></div>
+  <div class="tile"><p class="tile-label">Occupancy, next 30 days</p><p class="tile-value" id="h-occupancy">–</p></div>
+  <div class="tile"><p class="tile-label">Listings</p><p class="tile-value" id="h-count">–</p></div>
+</section>
+<p class="muted small">Your payout is the nights, extra-guest and pet fees and the cleaning fee, minus a 3% host fee.
+  Taxes and the guest service fee are not part of it. Occupancy is booked nights out of all nights in the next 30 days.</p>
+<section class="section">
+  <h2>Your listings</h2>
+  <div id="h-listings" class="grid"></div>
+</section>
+<section class="section">
+  <h2>Upcoming reservations</h2>
+  <div class="table-wrap">
+    <table class="table" aria-label="Upcoming reservations">
+      <thead><tr><th>Reference</th><th>Stay</th><th>Guest</th><th>Dates</th><th class="num">Nights</th><th class="num">Guest paid</th><th class="num">Your payout</th></tr></thead>
+      <tbody id="h-reservations"></tbody>
+    </table>
+  </div>
+</section>

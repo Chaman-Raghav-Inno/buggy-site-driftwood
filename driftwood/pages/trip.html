@@ -1,0 +1,75 @@
+<p id="loading" class="muted">Loading…</p>
+<div id="trip" hidden>
+  <p><a href="/trips">← All trips</a></p>
+  <header class="trip-head">
+    <img id="t-image" alt="" width="240" height="140">
+    <div>
+      <p class="eyebrow" id="t-status"></p>
+      <h1 id="t-name"></h1>
+      <p class="muted" id="t-dates"></p>
+      <p class="muted" id="t-ref"></p>
+    </div>
+  </header>
+  <div class="trip-grid">
+    <section class="card">
+      <h2>Price details</h2>
+      <dl id="t-price" class="totals"></dl>
+      <p><a id="t-receipt" href="#">View receipt</a></p>
+    </section>
+    <section class="card">
+      <h2>Cancellation</h2>
+      <p id="t-policy"></p>
+      <p id="t-deadline" class="deadline"></p>
+      <div class="actions" id="t-actions">
+        <button type="button" class="btn btn-ghost" id="t-change">Change dates</button>
+        <button type="button" class="btn btn-danger" id="t-cancel">Cancel trip</button>
+        <button type="button" class="btn btn-ghost" id="t-review">Write a review</button>
+      </div>
+      <p id="t-msg" class="msg" role="status"></p>
+    </section>
+  </div>
+  <section class="card">
+    <h2>Guest details</h2>
+    <dl id="t-guest" class="facts"></dl>
+  </section>
+</div>
+<dialog id="cancel-dialog" aria-labelledby="cancel-title">
+  <h2 id="cancel-title">Cancel this trip?</h2>
+  <p id="cancel-text"></p>
+  <div class="dialog-actions">
+    <button type="button" class="btn btn-ghost" data-value="keep">Keep my trip</button>
+    <button type="button" class="btn btn-danger" data-value="cancel">Cancel trip</button>
+  </div>
+</dialog>
+<dialog id="change-dialog" aria-labelledby="change-title">
+  <form id="change-form" novalidate>
+    <h2 id="change-title">Change dates</h2>
+    <div class="field-row">
+      <div class="field"><label for="c-in">Check-in</label><input id="c-in" type="date"></div>
+      <div class="field"><label for="c-out">Check-out</label><input id="c-out" type="date"></div>
+    </div>
+    <p id="c-msg" class="msg error" role="alert"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" id="c-close">Close</button>
+      <button type="submit" class="btn">Change dates</button>
+    </div>
+  </form>
+</dialog>
+<dialog id="review-dialog" aria-labelledby="review-title">
+  <form id="review-form" novalidate>
+    <h2 id="review-title">How was your stay?</h2>
+    <div class="field">
+      <label for="r-stars">Rating</label>
+      <select id="r-stars">
+        <option value="5">5 stars</option><option value="4">4 stars</option><option value="3">3 stars</option>
+        <option value="2">2 stars</option><option value="1">1 star</option>
+      </select>
+    </div>
+    <div class="field"><label for="r-text">Your review</label><textarea id="r-text" rows="4" maxlength="1000"></textarea></div>
+    <p id="r-msg" class="msg error" role="alert"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" id="r-close">Close</button>
+      <button type="submit" class="btn">Post review</button>
+    </div>
+  </form>
+</dialog>

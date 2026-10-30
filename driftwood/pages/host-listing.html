@@ -1,0 +1,28 @@
+<p><a href="/host">← Host dashboard</a></p>
+<h1 class="page-title" id="l-name">Edit listing</h1>
+<div class="grid-2">
+  <form id="price-form" class="card form" novalidate>
+    <h2>Prices and rules</h2>
+    <div class="field"><label for="l-base">Weekday price a night (Sun–Thu), USD</label><input id="l-base" inputmode="decimal" autocomplete="off"></div>
+    <div class="field"><label for="l-weekend">Weekend price a night (Fri, Sat), USD</label><input id="l-weekend" inputmode="decimal" autocomplete="off"></div>
+    <div class="field"><label for="l-cleaning">Cleaning fee, USD</label><input id="l-cleaning" inputmode="decimal" autocomplete="off"></div>
+    <div class="field-row">
+      <div class="field"><label for="l-min">Minimum stay (nights)</label><input id="l-min" type="number" min="0" max="60"></div>
+      <div class="field"><label for="l-guests">Maximum guests</label><input id="l-guests" type="number" min="1" max="16"></div>
+    </div>
+    <button type="submit" class="btn">Save prices</button>
+    <p id="price-msg" class="msg" role="status"></p>
+  </form>
+  <form id="block-form" class="card form" novalidate>
+    <h2>Block dates</h2>
+    <p class="muted small">Blocked nights can't be booked. Both dates are included.</p>
+    <div class="field-row">
+      <div class="field"><label for="b-from">From</label><input id="b-from" type="date"></div>
+      <div class="field"><label for="b-to">Through</label><input id="b-to" type="date"></div>
+    </div>
+    <button type="submit" class="btn">Block these nights</button>
+    <p id="block-msg" class="msg" role="status"></p>
+    <h3>Blocked nights</h3>
+    <ul id="blocked" class="pills"></ul>
+  </form>
+</div>
